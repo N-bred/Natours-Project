@@ -1,0 +1,28 @@
+.main {
+   .section-about {
+      background: $grey-text-1;
+      padding: 30rem 0;
+      margin: -25vh 0 0;
+
+      .heading-tertiary {
+         font-size: $font-size;
+         font-weight: 700;
+         text-transform: uppercase;
+         color: $grey-text;
+      }
+
+      .paragraph {
+         font-size: $font-size;
+
+         &:not(:last-child) {
+            margin-bottom: 3rem;
+         }
+      }
+   }
+
+   .section-tours {
+      background: $grey-text-1;
+      padding: 30rem 0 15rem;
+      margin: -15vh 0 0;
+   }
+}
