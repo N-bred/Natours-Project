@@ -4,13 +4,6 @@
       padding: 30rem 0;
       margin: -25vh 0 0;
 
-      .heading-tertiary {
-         font-size: $font-size;
-         font-weight: 700;
-         text-transform: uppercase;
-         color: $grey-text;
-      }
-
       .paragraph {
          font-size: $font-size;
 
@@ -20,9 +13,30 @@
       }
    }
 
+   .heading-tertiary {
+      font-size: $font-size;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $grey-text;
+   }
+
    .section-tours {
       background: $grey-text-1;
       padding: 30rem 0 15rem;
       margin: -15vh 0 0;
+   }
+
+   .section-stories {
+      padding: 15rem 0;
+      position: relative;
+   }
+
+   .section-book {
+      padding: 15rem 0;
+      background-image: linear-gradient(
+         to right bottom,
+         $ligth-green,
+         $dark-green
+      );
    }
 }
