@@ -1,92 +1,99 @@
 .btn {
-   &:link,
-   &:visited {
-      padding: 1.5rem 4rem;
-      text-decoration: none;
-      text-transform: uppercase;
+  &,
+  &:link,
+  &:visited {
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 10rem;
+    transition-property: transform, box-shadow;
+    transition: 0.1s ease-out;
+    position: relative;
+    font-size: $font-size;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &,
+  &:link {
+    &:hover,
+    &:focus {
+      outline: none;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba($black-text, 0.2);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba($black-text, 0.2);
+    }
+
+    &::after {
+      content: '';
       display: inline-block;
+      height: 100%;
+      width: 100%;
       border-radius: 10rem;
-      transition-property: transform, box-shadow;
-      transition: 0.1s ease-out;
-      position: relative;
-      font-size: $font-size;
-   }
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -10;
+      transition-property: transform, opacity;
+      transition: 0.4s ease-in;
+    }
+  }
 
-   &:link {
-      &:hover {
-         transform: translateY(-3px);
-         box-shadow: 0 10px 20px rgba($black-text, 0.2);
+  &--white {
+    background: $white;
+    color: $grey-text;
 
-         &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-         }
-      }
-
-      &:active {
-         transform: translateY(-1px);
-         box-shadow: 0 5px 10px rgba($black-text, 0.2);
-      }
-
-      &::after {
-         content: '';
-         display: inline-block;
-         height: 100%;
-         width: 100%;
-         border-radius: 10rem;
-         position: absolute;
-         top: 0;
-         left: 0;
-         z-index: -10;
-         transition-property: transform, opacity;
-         transition: 0.4s ease-in;
-      }
-   }
-
-   &--white {
+    &::after {
       background: $white;
-      color: $grey-text;
+    }
+  }
+  &--green {
+    background: $medium-green;
+    color: $white;
 
-      &::after {
-         background: $white;
-      }
-   }
-   &--green {
-      background: $medium-green;
-      color: $white;
+    &::after {
+      background: $ligth-green;
+    }
+  }
 
-      &::after {
-         background: $ligth-green;
-      }
-   }
-
-   &--header {
-      animation: moveInUp 1.5s ease-in-out;
-   }
+  &--header {
+    animation: moveInUp 1.5s ease-in-out;
+  }
 }
 
 .btn-text {
-   &:link,
-   &:visited {
-      color: $medium-green;
-      display: inline-block;
-      text-decoration: none;
-      border-bottom: 1px solid $ligth-green;
-      padding: 3px;
-      font-size: $font-size;
-      transition-property: transform, background, color, box-shadow;
-      transition: 0.2s ease-out;
-   }
+  &:link,
+  &:visited {
+    color: $medium-green;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $ligth-green;
+    padding: 3px;
+    font-size: $font-size;
+    transition-property: transform, background, color, box-shadow;
+    transition: 0.2s ease-out;
+  }
 
-   &:hover {
-      background: $medium-green;
-      color: $white;
-      box-shadow: 0 1rem 2rem rgba($black-text, 0.15);
-      transform: translateY(-3px);
-      border-bottom: 1px solid $dark-green;
-   }
-   &:active {
-      box-shadow: 0 0.5rem 1rem rgba($black-text, 0.15);
-      transform: translateY(-1px);
-   }
+  &:hover {
+    background: $medium-green;
+    color: $white;
+    box-shadow: 0 1rem 2rem rgba($black-text, 0.15);
+    transform: translateY(-3px);
+    border-bottom: 1px solid $dark-green;
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($black-text, 0.15);
+    transform: translateY(-1px);
+  }
 }

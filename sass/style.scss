@@ -3,8 +3,10 @@
 @import './Base/grid';
 @import './Abstracts/mixins';
 @import './Base/utilities';
+@import './Layout/navigation';
 @import './Layout/header';
 @import './Layout/main';
+@import './Layout/footer';
 @import './Components/composition';
 @import './Components/buttons';
 @import './Components/feature-box';
