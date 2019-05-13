@@ -1,3 +1,10 @@
+/* 
+0 - 600px : Phone
+600 - 900: Tablet Portrait
+900 - 1200: Tablet Landscape
+1800px + : Big Desktop
+
+*/
 *,
 *::after,
 *::before {
@@ -11,6 +18,24 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (min-width: 112.5em) {
+  html {
+    font-size: 68%;
+  }
+}
+
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -19,6 +44,12 @@ body {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (max-width: 75em) {
+  body {
+    padding: 0;
+  }
 }
 
 .row {
@@ -415,6 +446,12 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+}
+
 .navigation__checkbox {
   display: none;
 }
@@ -606,6 +643,8 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .header__main-header-container .main-header--title {
@@ -617,6 +656,13 @@ body {
           animation: moveInLeft 1s ease-in-out;
 }
 
+@media screen and (max-width: 37.5em) {
+  .header__main-header-container .main-header--title {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
+
 .header__main-header-container .main-header--sub {
   font-size: 2rem;
   letter-spacing: 1.75rem;
@@ -624,6 +670,13 @@ body {
   display: block;
   -webkit-animation: moveInRight 1s ease-in-out;
           animation: moveInRight 1s ease-in-out;
+}
+
+@media screen and (max-width: 37.5em) {
+  .header__main-header-container .main-header--sub {
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+  }
 }
 
 .main .section-about {
