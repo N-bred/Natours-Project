@@ -13,9 +13,13 @@
     right: 6rem;
     z-index: 15000;
     cursor: pointer;
-    // border: 1px solid #000;
     box-shadow: 0 1rem 3rem rgba($black-text, 0.15);
     text-align: center;
+
+    @include respond(tab-port) {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
 
     &:hover &--bars {
       &::after {
@@ -70,6 +74,11 @@
     right: 6.5rem;
     background-image: radial-gradient($ligth-green, $dark-green);
     z-index: 100;
+
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 2rem;
+    }
   }
 
   &__nav {

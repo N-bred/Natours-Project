@@ -61,6 +61,19 @@ body {
   margin-bottom: 8rem;
 }
 
+@media screen and (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
+
 .row::after {
   content: '';
   display: table;
@@ -73,6 +86,19 @@ body {
 
 .row [class^='col-']:not(:last-child) {
   margin-right: 6rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .row [class^='col-']:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .row [class^='col-'] {
+    width: 100% !important;
+  }
 }
 
 .row .col-1-of-2 {
@@ -471,6 +497,13 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 56.25em) {
+  .navigation__toogle {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
 .navigation__toogle:hover .navigation__toogle--bars::after {
   top: 1rem;
 }
@@ -526,6 +559,13 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 100;
+}
+
+@media screen and (max-width: 56.25em) {
+  .navigation__background {
+    top: 2rem;
+    right: 2rem;
+  }
 }
 
 .navigation__nav {
@@ -618,6 +658,13 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+@media screen and (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 85vh);
+            clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 85vh);
+  }
 }
 
 .header .header__logo-box {
@@ -723,6 +770,12 @@ body {
   font-size: 1.6rem;
 }
 
+@media screen and (max-width: 56.25em) {
+  .footer {
+    padding: 8rem 0;
+  }
+}
+
 .footer__logo-box {
   text-align: center;
   margin-bottom: 8rem;
@@ -737,6 +790,13 @@ body {
   border-top: 1px solid #eee;
   padding-top: 2rem;
   display: inline-block;
+}
+
+@media screen and (max-width: 56.25em) {
+  .footer__navigation, .footer__copyright {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .footer__list {
@@ -940,7 +1000,6 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  height: 95vh;
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
   background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   margin: -11rem 0 3rem;
