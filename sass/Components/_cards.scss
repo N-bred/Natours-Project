@@ -170,4 +170,83 @@
       font-size: 6rem;
       font-weight: 100;
    }
+
+   @include respond(tab-port) {
+      height: auto;
+      background: $white;
+      box-shadow: 0 1.5rem 4rem rgba($black-text, 0.15);
+
+      &__side {
+         height: auto;
+         position: relative;
+         border-radius: 3px;
+
+         &--front {
+            background: $white;
+            box-shadow: none;
+         }
+         &--back {
+            transform: rotateY(0);
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+         }
+      }
+
+      &:hover &__side--front {
+         transform: rotateY(0);
+      }
+      &:hover &__side--back {
+         transform: rotateY(0);
+      }
+
+      &__picture {
+         background-size: cover;
+         height: 23rem;
+         background-blend-mode: screen;
+         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+         &--1 {
+            background-image: linear-gradient(
+                  to right top,
+                  $ligth-orange,
+                  $medium-orange
+               ),
+               url('../img/nat-5.jpg');
+            vertical-align: top;
+         }
+         &--2 {
+            background-image: linear-gradient(
+                  to right top,
+                  $ligth-green,
+                  $medium-green
+               ),
+               url('../img/nat-6.jpg');
+            vertical-align: top;
+         }
+         &--3 {
+            background-image: linear-gradient(
+                  to right top,
+                  $ligth-blue,
+                  $medium-blue
+               ),
+               url('../img/nat-7.jpg');
+            vertical-align: top;
+         }
+      }
+
+      &__cta {
+         position: relative;
+         left: 0;
+         top: 0;
+         transform: translateY(0);
+         width: 100%;
+         padding: 4rem;
+      }
+
+      &__price-box {
+         margin: 3rem 0;
+      }
+
+      &__price-value {
+         font-size: 6rem;
+      }
+   }
 }

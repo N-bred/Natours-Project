@@ -4,6 +4,10 @@
       padding: 30rem 0;
       margin: -25vh 0 0;
 
+      @include respond(tab-port) {
+         padding: 22rem 0;
+      }
+
       .paragraph {
          font-size: $font-size;
 
@@ -24,11 +28,18 @@
       background: $grey-text-1;
       padding: 30rem 0 15rem;
       margin: -15vh 0 0;
+
+      @include respond(tab-port) {
+         padding: 20rem 0 10rem;
+      }
    }
 
    .section-stories {
       padding: 15rem 0;
       position: relative;
+      @include respond(tab-port) {
+         padding: 10rem 0;
+      }
    }
 
    .section-book {
